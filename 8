@@ -1,0 +1,24 @@
+int border = 5;
+
+void setup() {
+  size(400,400);
+  background(0,0,0);
+}
+
+void draw() {
+  strokeWeight(1); // weight of the stroke
+  stroke(255); // color of the stroke 
+ 
+    int t = width;
+  while (t > border) {
+    line(width-border,t-border,t-border,height-border);
+    t = t - 5;
+  }
+  
+  int i = border;
+  while (i < (width-border)) {
+    line(i,border,border,i); // x, y, x2 , y2 
+    i = i + 5;
+  }
+  
+}
